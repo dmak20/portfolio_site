@@ -21,7 +21,7 @@
   <body>
     <!-- header -->
     <!-- navbar fixed to top -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1">
@@ -32,19 +32,19 @@
                 </button>
                 <a class="navbar-brand" href="#">
                     <img alt="Brand" src="img/dm_brand.png"/>
-                    
                 </a>
             </div>
-            <div class="collapse navbar-collapse" id="collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                  <li><a href="#">dan makfinsky</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+            <div class="collapse navbar-collapse nav-menu" id="collapse-1">
+
+                <ul class="nav navbar-right">
                     <li class="active">
-                        <a href="#">portfolio <span class="sr-only">(current)</span></a>
+                        <a href="#">About</a>
                     </li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
                     
                 </ul>
             </div>
@@ -53,29 +53,60 @@
        
     <!-- content -->
     
+    <div class="container-fluid about">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12 section-title text-center">
+                <h1>ABOUT <span style="background-color: rgba(59,63,80,0.6);">ME</span></h1>
+                
+            </div>         
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-5">
+              <img src="http://placehold.it/280x280" class="img-responsive"/>
+            </div>
+            <div class="col-sm-4">
+              <p>Welcome to my upcoming portfolio site!</p>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="col-sm-3">
+              <ul>
+                <li><span class="glyphicon glyphicon-user"></span> <strong>Name:</strong> Dan Makfinsky</li>
+                <li><span class="glyphicon glyphicon-envelope"></span> <strong>Email:</strong> dmak@faktorystudios.com</li>
+                <li><span class="glyphicon glyphicon-open"></span> <strong>Website:</strong> www.faktorystudios.com</li>
+                <li><span class="glyphicon glyphicon-home"></span> <strong>Location:</strong> Silver Spring, MD</li>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    
     <div class="container">
         
         <div class="row">
           
+            <div class="col-sm-12 section-title text-center">
+                <h1 style="color:#fff;">MY <span style="background-color: rgba(239,239,239,0.6);">WORK</span></h1>
+            </div>
             <div class="col-sm-12">
-                <h2 id="basic-waypoint">Portfolio</h2>
                   <!-- Button filter list here -->
                   <div id="filters">
                     <ul class="portfolio-filter-list list-inline white">
                       <li>
-                        <a class="active item" href="#" data-filter="*">ALL</a>
+                        <a class="active item" href="#_" data-filter="*">ALL</a>
                       </li>
                       <li>
-                        <a class="item" href="#" data-filter=".game">GAME</a>
+                        <a class="item" href="#_" data-filter=".game">GAME</a>
                       </li>
                       <li>
-                        <a class="item" href="#" data-filter=".mobile">MOBILE</a>
+                        <a class="item" href="#_" data-filter=".mobile">MOBILE</a>
                       </li>
                       <li>
-                        <a class="item" href="#" data-filter=".web">WEB</a>
+                        <a class="item" href="#_" data-filter=".web">WEB</a>
                       </li>
                       <li>
-                        <a class="item" href="#" data-filter=".kiosk">KIOSK</a>
+                        <a class="item" href="#_" data-filter=".kiosk">KIOSK</a>
                       </li>
                     </ul>
                     </div>
@@ -149,23 +180,27 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid about">
+    
+    <!-- resume -->
+    <div class="container-fluid resume">
       <div class="container">
         <div class="row">
-            <div class="col-md-12 basic-waypoint">
-                <h2>About</h2>
-                <p>Welcome to my upcoming portfolio site! I&#8217;m in the process of revamping things. In the meantime read a little about my past. Drop me a line if you have any questions. Thanks for visiting!</p>
-<p>I&#8217;ve been a multimedia developer for over a decade and a half working on everything from websites to kiosks to video games. I am fluent in many different programming and scripting languages as well as graphics programs.</p>
-<div style="font-size: 13px; font-weight: 600;">As of August 2013, I have completed my B.S. in Game Programming and I have found full-time employment.</div>
-<p>Prior to taking a sabbatical to complete my degree I worked with the team at EA Mythic on <a title="Warhammer Online: Age of Reckoning" href="http://www.warhammeronline.com/">Warhammer Online: Age of Reckoning</a> and <a title="Ultima Forever: Quest for the Avatar" href="http://www.ultimaforever.com/">Ultima Forever: Quest for the Avatar</a>. Working with the team at EA Mythic was one of the best experiences of my professional career. It helped me develop a real understanding of the video game industry as well as deepen my lifelong passion for video games.</p>
-<p>My last two years were spent attending the <a title="University of Advancing Technology" href="http://www.uat.edu" target="_blank">University of Advancing Technology</a> full-time. The experience provided by UAT was extremely humbling, challenging, and a greatly fulfilling. During my education I was exposed to many facets of the industry including game development, design, creative writing, legal issues and the myriad programming languages and API’s commonly used.</p>
-<p>All this has happened while simultaneously studying xCode, Android, modern web development and beginning the adventure of fatherhood!</p>
-<div style="font-size: 13px; font-weight: 600;">Please browse my <a title="Portfolio" href="http://danmakfinsky.com/portfolio/">portfolio </a>for examples of my previous work experience and <a title="Contact" href="http://danmakfinsky.com/contact/">contact me</a> if you think I may make a valuable addition to your team!</div>
-<p>Thank you for visiting!</p>
-<p>As of the latest wordpress update my site has been experiencing some technical issues so a new site is coming soon! Am exploring the use of famo.us framework.</p>
-            </div>
-        </div>
+          <div class="col-sm-12 section-title text-center">
+            <h1>MY <span>RESUME</span></h1>
+          </div>
       </div>
+    </div>
+    </div>
+    
+    <!-- Contact section -->
+    <div class="container-fluid contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 section-title text-center">
+            <h1 style="color:#fff">CONTACT <span style="background-color: rgba(239,239,239,0.6);">ME</span></h1>
+          </div>
+      </div>
+    </div>
     </div>
     
     <!-- footer -->

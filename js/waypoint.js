@@ -1,10 +1,10 @@
 $(function() {
       var $document = $(document)
       
-var waypoint = new Waypoint({
-  element: document.getElementById('basic-waypoint'),
+/*var waypoint = new Waypoint({
+  element: document.getElementById('.about'),
   handler: function() {
-        $('.basic-waypoint').addClass('animated fadeIn');
+        $('.portfolio').addClass('animated fadeIn');
   },
   offset: 30
 })
@@ -12,6 +12,6 @@ var waypoint = new Waypoint({
 $('.basic-waypoint').waypoint(function(direction) {
   
 //  $('.basic-waypoint').addClass('animated fadeInLeft');
-});
+});*/
 
 });
