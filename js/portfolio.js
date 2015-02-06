@@ -1,15 +1,22 @@
 $(function() {
-    var $container = $('#container');
+    var $container = $('.portfolio');
     // init
     $container.isotope({
       // options
       itemSelector: '.item',
-      layoutMode: 'fitRows'
+      layoutMode: 'fitRows',
+      animationOptions: {
+        duration: 250,
+        easing: 'easeInOutSine',
+        queue: false
+      }
     });
     
     // filter items on button clicks
-    $('#filters').on('click', 'button', function() {
+    $('.portfolio-filter-list li a').on('click', function() {
+        $('.portfolio-filter-list').find('a').removeClass('active');
        var filterValue = $(this).attr('data-filter');
        $container.isotope({filter: filterValue});
+       $(this).addClass('active');
     });
 });
