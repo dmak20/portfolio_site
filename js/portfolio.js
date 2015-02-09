@@ -18,5 +18,6 @@ $(function() {
        var filterValue = $(this).attr('data-filter');
        $container.isotope({filter: filterValue});
        $(this).addClass('active');
+       return false;
     });
 });
