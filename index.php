@@ -99,7 +99,7 @@ if ($conn->connect_error) {
       </div>
     </div>
     
-    
+    <!-- Portfolio section -->
     <div class="container">
         
         <div class="row">
@@ -175,9 +175,18 @@ if ($conn->connect_error) {
                           if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                               echo "<div class='item ". str_replace(",", " ", $row['tags']) ."'>";
-                              echo "<a href='#_'>";
-                              echo "<img width='280' height='190' src='img/portfolio/".$row['thumbnail']."'/>";
-                              echo "</a>";
+                              echo "<div class='frame'>";
+                              echo "\t<a href='#_'>";
+                              echo "\t\t<img width='280' height='190' src='img/portfolio/".$row['thumbnail']."'/>";
+                              echo "\t\t<div class='overlay'>";
+                              echo "\t\t\t<div class='item-info'>";
+                              echo "\t\t\t\t<i class='fa-camera'></i>";
+                              echo "\t\t\t\t<h3>Project Name</h3>";
+                              echo "\t\t\t\t<span>Tags</span>";
+                              echo "\t\t\t</div>";
+                              echo "\t\t</div>";
+                              echo "\t</a>";
+                              echo "</div>";
                               echo "</div>\n\n";
                             }
                           }
@@ -188,6 +197,7 @@ if ($conn->connect_error) {
                         <div class="item game" data-category="w1">
                           <a href="#">
                             <img width="280" height="190" src="http://placehold.it/280x190" />
+
                           </a>
                         </div>
                         <div class="item web" data-category="w2">
