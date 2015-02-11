@@ -27,7 +27,8 @@ if ($conn->connect_error) {
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-
+    <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,7 +69,7 @@ if ($conn->connect_error) {
                     <li>
                       <a href="#resume">Resume</a>
                     </li>
-                    <li>
+                    <li class="hireMe">
                       <a href="#hire">Hire Me</a>
                     </li>
                     
@@ -82,44 +83,17 @@ if ($conn->connect_error) {
     <!-- Home/Hero caption or image -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 section-title text-center">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:500px;">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                  </ol>
-                
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                      <img src="..." alt="...">
-                      <div class="carousel-caption">
-                        ...
-                      </div>
-                    </div>
-                    <div class="item">
-                      <img src="..." alt="...">
-                      <div class="carousel-caption">
-                        ...
-                      </div>
-                    </div>
-                    ...
-                  </div>
-                
-                  <!-- Controls -->
-                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                
-            </div>         
+          <div class="home">
+            <div class="container">
+            <div class="col-sm-12 text-center">
+              <div class="centerContent">
+                <div class="top-caption">WELCOME TO MY SITE</div>
+                <div class="main-caption">DAN MAKFINSKY</div>
+                <div class="top-caption">MULTIMEDIA DEVELOPER</div>
+              </div>
+            </div>
+            </div>
+            </div>
         </div>
     </div>
     
@@ -135,15 +109,18 @@ if ($conn->connect_error) {
         </div>
         
         <div class="row">
-            <div class="col-sm-5">
+            <div class="col-sm-3">
               <img src="http://placehold.it/280x280" class="img-responsive"/>
             </div>
-            <div class="col-sm-4">
-              <p>Welcome to my upcoming portfolio site!</p>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="col-sm-6">
+              <h3 style="font-family:'Oswald'; font-size: 18px; font-weight: normal; margin:0; margin-bottom:20px; color:#666; letter-spacing: .05em;line-height: 1.5em;">I've been a multimedia developer for over a decade and a half working on everything from websites to kiosks to video games. I am fluent in many different programming and scripting languages as well as graphics programs.</h3>
+              <p>I love working with new software and technology. Which means that I'm constantly learning. Seldom does a day
+              pass where I haven't done a tutorial or followed a lesson in a MOOC or .. something!</p>
+              <div style="font-size: 13px; font-weight: 600;">Please browse my <a title="Portfolio" href="http://danmakfinsky.com/portfolio/">portfolio </a>for examples of my previous work experience and <a title="Contact" href="http://danmakfinsky.com/contact/">contact me</a> if you think I may make a valuable addition to your team!</div>
+              
             </div>
             <div class="col-sm-3">
-              <ul class="about-info">
+              <ul class="about-info" style="list-style: none;">
                 <li><span class="glyphicon glyphicon-user"></span> <strong>Name:</strong> Dan Makfinsky</li>
                 <li><span class="glyphicon glyphicon-envelope"></span> <strong>Email:</strong> dmak@faktorystudios.com</li>
                 <li><span class="glyphicon glyphicon-open"></span> <strong>Website:</strong> <a href="http://www.faktorystudios.com">www.faktorystudios.com</a></li>
@@ -162,6 +139,8 @@ if ($conn->connect_error) {
             <div class="col-sm-12 section-title text-center">
                 <h1 style="color:#fff;">MY <span style="background-color: rgba(239,239,239,0.6);">WORK</span></h1>
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12">
                   <!-- Button filter list here -->
                   <div id="filters">
@@ -215,11 +194,9 @@ if ($conn->connect_error) {
                   </div>
             </div>
                   <!-- End of button filter list -->
-                  
-                  
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
+            <div class="container" style="vertical-align: middle;">
+            <div class="row" style="vertical-align: middle;">
+                      <div class="col-sm-10">
                         <div class="portfolio">
                           
                           <!-- Portfolio thumbnails here -->
@@ -245,67 +222,12 @@ if ($conn->connect_error) {
                               echo "</div>\n\n";
                             }
                           }
-                          
-                          
                           ?>
-                          
-                        <div class="item game" data-category="w1">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-
-                          </a>
-                        </div>
-                        <div class="item web" data-category="w2">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item kiosk" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item game" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item game" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item mobile" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item mobile" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item w3 mar" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item mobile" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
-                        <div class="item vr game" data-category="w3">
-                          <a href="#">
-                            <img width="280" height="190" src="http://placehold.it/280x190" />
-                          </a>
-                        </div>
                         <!-- End of Portfolio thumbnails here -->
                         
                         </div>
                       </div>
                     </div>
-                  </div>
             </div>
         </div>
     </div>

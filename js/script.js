@@ -22,13 +22,12 @@ $(document).ready(function(){
                   console.log('scrolling to '+ hash);
                   // animate scroll
                   $(document.body).animate({
-                    'scrollTop': $(hash).offset().top
+                    'scrollTop': $(hash).offset().top + 10
                   }, 300, function(){
                     
-                    window.location.hash = hash;                 
+                    //window.location.hash = hash;                 
                   });
  
-                  
                 });
                 
                 $(window).scroll(function() {
@@ -43,6 +42,17 @@ $(document).ready(function(){
                     }
                   });
                 });
+                
+              /*  $(window).resize(function() {
+                  var display = $(".portfolio").css("display"); //Get current display style
+                  $(".portfolio").css({display:"inline-block", width:""});
+                  
+                  //Calculate width
+                  var contentWidth = $('.portfolio').width();
+                  
+                  //Return display style, set new width
+                  $('.portfolio').css({width: contentWidth, display: display});
+                });*/
                 
                 // Send email
                 $('#send_message').click(function(e){
