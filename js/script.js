@@ -1,5 +1,51 @@
 $(document).ready(function(){
-		$('#send_message').click(function(e){
+		
+                // Update main navigation
+                $('.nav li a').click(function(e) {
+                  
+                  e.preventDefault();
+                  
+                  // clear all active items
+                  $('.nav li').find('a').removeClass('active');
+                  
+                  // add active item back
+                  var $this = $(this);
+                  if (!$this.hasClass('active')) {
+                    $this.addClass('active');
+                  }               
+                  
+                });
+                
+                // animate scroll to hash
+                $(".nav li a[href^='#']").on('click', function(e) {
+                  var hash = this.hash;
+                  console.log('scrolling to '+ hash);
+                  // animate scroll
+                  $(document.body).animate({
+                    'scrollTop': $(hash).offset().top
+                  }, 300, function(){
+                    
+                    window.location.hash = hash;                 
+                  });
+ 
+                  
+                });
+                
+                $(window).scroll(function() {
+                  var windscroll = $(window).scrollTop();
+                  var sections = $("section");
+                  sections.each(function(i) {
+                    console.log('each section: ' + $(this).attr("id"));
+                    console.log(i);
+                    if ($(this).position().top <= windscroll) {
+                      $('.nav-menu ul li a.active').removeClass('active');
+                      $('.nav-menu ul li a').eq(i).addClass('active');
+                    }
+                  });
+                });
+                
+                // Send email
+                $('#send_message').click(function(e){
 			e.preventDefault();
 			var error = false;
 			var topic = $('#topic').val();
@@ -49,4 +95,6 @@ $(document).ready(function(){
 				});
 			}
 		});
+                
+                
 	});

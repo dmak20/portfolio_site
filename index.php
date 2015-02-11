@@ -36,9 +36,10 @@ if ($conn->connect_error) {
     <![endif]-->
   </head>
   <body>
+    <section id="home"></section>
     <!-- header -->
     <!-- navbar fixed to top -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1">
@@ -47,7 +48,7 @@ if ($conn->connect_error) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="font-family:'Open sans bold';color:#ff9900;">DM
+                <a class="navbar-default navbar-brand" href="#" >DM
                     <!--<img alt="Brand" src="img/dm_brand.png"/>-->
                     
                 </a>
@@ -55,14 +56,21 @@ if ($conn->connect_error) {
             <div class="collapse navbar-collapse nav-menu" id="collapse-1">
 
                 <ul class="nav navbar-right">
-                    <li class="active">
-                        <a href="#">About</a>
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                    <li>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a href="#portfolio">Portfolio</a>
                     </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li>
+                      <a href="#resume">Resume</a>
+                    </li>
+                    <li>
+                      <a href="#hire">Hire Me</a>
+                    </li>
                     
                 </ul>
             </div>
@@ -71,6 +79,52 @@ if ($conn->connect_error) {
        
     <!-- content -->
     
+    <!-- Home/Hero caption or image -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 section-title text-center">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:500px;">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol>
+                
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="..." alt="...">
+                      <div class="carousel-caption">
+                        ...
+                      </div>
+                    </div>
+                    <div class="item">
+                      <img src="..." alt="...">
+                      <div class="carousel-caption">
+                        ...
+                      </div>
+                    </div>
+                    ...
+                  </div>
+                
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+                
+            </div>         
+        </div>
+    </div>
+    
+    <!-- About Me -->
+    <section id="about"></section>
     <div class="container-fluid about">
       <div class="container">
         <div class="row">
@@ -100,6 +154,7 @@ if ($conn->connect_error) {
     </div>
     
     <!-- Portfolio section -->
+    <section id="portfolio"></section>
     <div class="container">
         
         <div class="row">
@@ -256,6 +311,7 @@ if ($conn->connect_error) {
     </div>
     
     <!-- resume -->
+        <section id="resume"></section>
     <div class="container-fluid resume">
       <div class="container">
         <div class="row">
@@ -267,11 +323,12 @@ if ($conn->connect_error) {
     </div>
     
     <!-- Contact section -->
+    <section id="hire"></section>
     <div class="container-fluid contact">
-      <div class="container">
+      <div class="container" id="hire">
         <div class="row">
           <div class="col-sm-12 section-title text-center">
-            <h1 style="color:#fff">CONTACT <span style="background-color: rgba(239,239,239,0.6);">ME</span></h1>
+            <h1 style="color:#fff">HIRE <span style="background-color: rgba(239,239,239,0.6);">ME</span></h1>
           </div>
         </div>
         <div class="row">
