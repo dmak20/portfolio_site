@@ -103,28 +103,42 @@ if ($conn->connect_error) {
       <div class="container">
         <div class="row">
             <div class="col-sm-12 section-title text-center">
-                <h1>ABOUT <span style="background-color: rgba(59,63,80,0.6);">ME</span></h1>
+                <h1>ABOUT <span style="background-color: rgba(0,150,250, 1);">ME</span></h1>
                 
             </div>         
         </div>
         
         <div class="row">
-            <div class="col-sm-3">
-              <img src="http://placehold.it/280x280" class="img-responsive"/>
+            <div class="col-sm-3 text-center info-picture-box">
+              <img src="img/headshot.jpg" class="img-center img-responsive" style="margin-left:auto; margin-right:auto;"/>
+              <div class="info-picture-caption">
+                <h2 style="color:#fff; margin:0;">DAN MAKFINSKY</h2>
+                <h5 style="color:#fff;">Multimedia Developer</h5>
+              </div>
             </div>
             <div class="col-sm-6">
-              <h3 style="font-family:'Oswald'; font-size: 18px; font-weight: normal; margin:0; margin-bottom:20px; color:#666; letter-spacing: .05em;line-height: 1.5em;">I've been a multimedia developer for over a decade and a half working on everything from websites to kiosks to video games. I am fluent in many different programming and scripting languages as well as graphics programs.</h3>
-              <p>I love working with new software and technology. Which means that I'm constantly learning. Seldom does a day
-              pass where I haven't done a tutorial or followed a lesson in a MOOC or .. something!</p>
-              <div style="font-size: 13px; font-weight: 600;">Please browse my <a title="Portfolio" href="http://danmakfinsky.com/portfolio/">portfolio </a>for examples of my previous work experience and <a title="Contact" href="http://danmakfinsky.com/contact/">contact me</a> if you think I may make a valuable addition to your team!</div>
+              <h3 class="info-text-quote">I've been a multimedia developer who for over a decade and a half has worked on everything from websites to kiosks to video games. I am fluent in many different programming and scripting languages as well as graphics programs.</h3>
+              <p>Hello, I'm an award winning multimedia developer located in the Washington DC area. I hold a B.S. in Game Programming from the University of Advancing Technology.</p>
+              <p>I am currently a freelance contractor available to work on a variety of projects ranging from gaming and interactive media development to mobile and web development.
+              While I am most passionate about developing games using technology like Unity3D, I have spent a considerable amount of time developing for iOS and Android as
+              well as working on front and backend web frameworks.</p>
+              <p>I love working with new software and hardware technology which means that I'm constantly learning. Seldom does a day
+              pass where I haven't done a tutorial or completed another online lesson through one of various online education websites I frequent.
+              As well as software development, I am beginning my foray into microcontrollers, namely the arduino.</p>
+              <div style="font-family: 'Oswald'; color:#999; font-size: 16px; font-weight: normal;"><a href="#hire" style="color:#fff; border-radius:3px; background-color:#ff6600; padding:4px; text-decoration:none;">Hire me</a> today to get started realizing your project.</div>
               
             </div>
             <div class="col-sm-3">
               <ul class="about-info" style="list-style: none;">
-                <li><span class="glyphicon glyphicon-user"></span> <strong>Name:</strong> Dan Makfinsky</li>
-                <li><span class="glyphicon glyphicon-envelope"></span> <strong>Email:</strong> dmak@faktorystudios.com</li>
-                <li><span class="glyphicon glyphicon-open"></span> <strong>Website:</strong> <a href="http://www.faktorystudios.com">www.faktorystudios.com</a></li>
-                <li><span class="glyphicon glyphicon-home"></span> <strong>Location:</strong> Silver Spring, MD</li>
+                <li><span class="glyphicon glyphicon-user info-glyph"></span> <strong>Name:</strong> Dan Makfinsky</li>
+                <li><span class="glyphicon glyphicon-envelope info-glyph"></span> <strong>Email:</strong> dmak@faktorystudios.com</li>
+                <li><span class="glyphicon glyphicon-open info-glyph"></span> <strong>Website:</strong> <a href="http://www.faktorystudios.com">www.faktorystudios.com</a></li>
+                <li><span class="glyphicon glyphicon-home info-glyph"></span> <strong>Location:</strong> Silver Spring, MD</li>
+                <div style="height:60px;"></div>
+                <div class="award-box" ><img src="img/awards/DanMakfinsky_AGDAAward_th.png"/></div>
+                <div class="award-box" >Award</div>
+                <div class="award-box" >Award</div>
+                <div class="award-box" >Award</div>
             </div>
         </div>
       </div>
@@ -137,7 +151,7 @@ if ($conn->connect_error) {
         <div class="row">
           
             <div class="col-sm-12 section-title text-center">
-                <h1 style="color:#fff;">MY <span style="background-color: rgba(239,239,239,0.6);">WORK</span></h1>
+                <h1 style="color:#fff;">MY <span style="background-color: rgba(0,150,250, .75);">WORK</span></h1>
             </div>
         </div>
         <div class="row">
@@ -214,7 +228,7 @@ if ($conn->connect_error) {
                               echo "\t\t\t<div class='item-info'>";
                               echo "\t\t\t\t<i class='fa-camera'></i>";
                               echo "\t\t\t\t<h3>Project Name</h3>";
-                              echo "\t\t\t\t<span>Tags</span>";
+                              echo "\t\t\t\t<span>".strtoupper(str_replace(","," / ", $row['tags']))."</span>";
                               echo "\t\t\t</div>";
                               echo "\t\t</div>";
                               echo "\t</a>";
@@ -238,7 +252,7 @@ if ($conn->connect_error) {
       <div class="container">
         <div class="row">
           <div class="col-sm-12 section-title text-center">
-            <h1>MY <span>RESUME</span></h1>
+            <h1>MY <span style="background-color: rgba(0,150,250, .75);">RESUME</span></h1>
           </div>
       </div>
     </div>
@@ -250,7 +264,7 @@ if ($conn->connect_error) {
       <div class="container" id="hire">
         <div class="row">
           <div class="col-sm-12 section-title text-center">
-            <h1 style="color:#fff">HIRE <span style="background-color: rgba(239,239,239,0.6);">ME</span></h1>
+            <h1 style="color:#fff">HIRE <span style="background-color: rgba(0,150,250, .75);">ME</span></h1>
           </div>
         </div>
         <div class="row">

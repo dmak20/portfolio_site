@@ -17,7 +17,7 @@ $(document).ready(function(){
                 });
                 
                 // animate scroll to hash
-                $(".nav li a[href^='#']").on('click', function(e) {
+                $("a[href^='#']").on('click', function(e) {
                   var hash = this.hash;
                   console.log('scrolling to '+ hash);
                   // animate scroll
