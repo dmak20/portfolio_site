@@ -222,6 +222,96 @@ body {
     -webkit-border-radius: 4px;
     box-sizing: content-box;
 }
+
+.hire-button-text {
+    color:#fff;
+    border-radius:3px;
+    background-color:#ff6600;
+    padding:4px;
+    text-decoration:none;
+}
+
+.hire-text {
+    font-family: 'Oswald';
+    color:#999;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.skills {
+    color: #fff;
+    
+}
+
+.skill-list {
+    list-style-type: none;
+    margin: 0 auto;
+    padding:0;
+    opacity: 0;
+}
+
+.skill-list li {
+    display: inline-block;
+    list-style-type: none;
+    width:110px;
+    margin: 15px;
+}
+
+.skill-list-small {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.skill-list-small li {
+    position:relative;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 14px;
+    margin-top:0px;
+    text-align:center;
+
+}
+
+.skillChart {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  text-align: center;
+}
+.skillChart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.percent {
+    font-family: 'Oswald';
+    font-weight: bold;
+    font-size: 18px;
+  line-height: 80px;
+  padding-left:15px;
+  z-index: 2;
+}
+
+.skill-name {
+    position:relative;
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-size: 18px;
+    margin-top:5px;
+    text-align:center;
+}
+
+.percent:after {
+  content: '%';
+  margin-left: 0.1em;
+  font-size: .8em;
+}
+
 .nav-menu ul li {
     float: left;
     margin: 0px 2px !important;
@@ -239,7 +329,7 @@ body {
 .about-info {
     width: 100%;
     max-width:250px;
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     font-family: "open sans";
     font-size: 12px;
@@ -276,13 +366,48 @@ body {
     width:25%;
 }
 
+.resume {
+    width:100%;
+    margin:0 auto 30px;
+    padding:0;
+}
+
+.resume a {
+    width: 100%;
+    border-radius:2px;
+    font-family: 'Oswald';
+    font-size: 18px !important;
+    color: #fff;
+    background-color: rgba(0,150,250, .75);
+}
+
+.awards-section {
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.awards-section ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
 .award-box {
-    border:1px solid #666;
+    border:1px solid #ccc;
     text-align:center;
     width:120px;
     height:130px;
-    margin:0 2px 2px 0;
-    float:left;
+    padding: 0;
+    margin:0 auto;
+    display:inline-block;
+    overflow: hidden;
+}
+
+.award-box img{
+    margin: 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -306,11 +431,9 @@ body {
     }
 }
 
-.resume {
-    background: #fff;
-    border: 0px solid;
-    color: #000;
+.skills {
     padding-bottom:50px;
+    margin: 0 auto;
 }
 
 .contact {
@@ -343,8 +466,10 @@ body {
 }
 
 .portfolio {
-  padding-bottom:50px;
-  margin: 0 auto;
+    background: #fff;
+    border: 0px solid;
+    color: #000;
+    padding-bottom:50px;
 }
 
 

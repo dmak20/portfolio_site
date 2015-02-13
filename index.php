@@ -60,18 +60,21 @@ if ($conn->connect_error) {
                   <li>
                     <a href="#home">Home</a>
                   </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="#resume">Resume</a>
-                    </li>
-                    <li class="hireMe">
-                      <a href="#hire">Hire Me</a>
-                    </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#skills">Skills</a>
+                  </li>
+                  <li>
+                      <a href="#portfolio">Work</a>
+                  </li>
+                  <li>
+                    <a href="#resume">Resume</a>
+                  </li>
+                  <li class="hireMe">
+                    <a href="#hire">Hire Me</a>
+                  </li>
                     
                 </ul>
             </div>
@@ -125,33 +128,149 @@ if ($conn->connect_error) {
               <p>I love working with new software and hardware technology which means that I'm constantly learning. Seldom does a day
               pass where I haven't done a tutorial or completed another online lesson through one of various online education websites I frequent.
               As well as software development, I am beginning my foray into microcontrollers, namely the arduino.</p>
-              <div style="font-family: 'Oswald'; color:#999; font-size: 16px; font-weight: normal;"><a href="#hire" style="color:#fff; border-radius:3px; background-color:#ff6600; padding:4px; text-decoration:none;">Hire me</a> today to get started realizing your project.</div>
+              <div class="hire-text"><a href="#hire" class="hire-button-text">Hire me</a> today start building your project!</div>
               
             </div>
             <div class="col-sm-3">
               <ul class="about-info" style="list-style: none;">
                 <li><span class="glyphicon glyphicon-user info-glyph"></span> <strong>Name:</strong> Dan Makfinsky</li>
-                <li><span class="glyphicon glyphicon-envelope info-glyph"></span> <strong>Email:</strong> dmak@faktorystudios.com</li>
                 <li><span class="glyphicon glyphicon-open info-glyph"></span> <strong>Website:</strong> <a href="http://www.faktorystudios.com">www.faktorystudios.com</a></li>
                 <li><span class="glyphicon glyphicon-home info-glyph"></span> <strong>Location:</strong> Silver Spring, MD</li>
-                <div style="height:60px;"></div>
-                <div class="award-box" ><img src="img/awards/DanMakfinsky_AGDAAward_th.png"/></div>
-                <div class="award-box" >Award</div>
-                <div class="award-box" >Award</div>
-                <div class="award-box" >Award</div>
+              </ul>
+              <div class="resume"><a class="btn btn-default" href="DanMakfinsky_RESUME_2015_Feb_4.pdf" role="button" target="_blank">Download Resume</a></div>
+                <div class="awards-section">
+                  <strong style="color:#666;font-size:18px; font-family:'Oswald'; font-weight:normal;">Awards</strong>
+                  <ul>
+                    <li class="award-box"><img src="img/awards/award_w3.png" class="img-responsive"/></li>
+                    <li class="award-box"><img src="img/awards/award_agda.png" class="img-responsive"/></li>
+                    <li class="award-box"><img src="img/awards/award_stc.png" class="img-responsive"/></li>
+                    <li class="award-box"><img src="img/awards/award_communicator.png" class="img-responsive"/></li>
+                  </ul>
+                </div>
+                <div class="awards-section">
+                  <strong style="color:#666;font-size:18px; font-family:'Oswald'; font-weight:normal;">Games Shipped</strong>
+                  <ul>
+                    <li class="award-box"><img src="img/games/war.png" class="img-responsive" title="EA Warhammer Online"/></li>
+                    <li class="award-box"><img src="img/games/u4e.png" class="img-responsive" title="Ultima Forever: Quest for the Avatar"/></li>
+                  </ul>
+                </div>
+                
             </div>
         </div>
       </div>
     </div>
     
+    <!-- Skills -->
+    <section id="skills"></section>
+    <div class="container skills">
+      <div class="row">
+        <div class="col-sm-12 section-title text-center">
+          <h1 style="color:#fff; margin-bottom:5px;">MY <span style="background-color: rgba(0,150,250, .75);">SKILLS</span></h1>
+          <p><strong style="font-size:18px; font-family:'Oswald'; font-weight:normal;">I have knowledge in a variety of programming languages, sdk's, frameworks and graphics applications.</strong></p>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12" style="text-align:center;">
+            <h3 style="font-family:'Oswald';">Programming Languages</h3>
+          <ul class="skill-list">
+            <li>
+              <div class="skillChart" data-percent="90">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">PHP</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="85">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">C#</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="65">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">Java</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="65">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">C++</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="65">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">SWIFT</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="65">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">OBJECTIVE-C</div>
+            </li>
+            <li>
+              <div class="skillChart" data-percent="65">
+                <span class="percent"></span>
+              </div>
+              <div class="skill-name">PROCESSING</div>
+            </li>
+          </ul>
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-sm-3"></div>
+          <div class="col-sm-2" style="text-align:center; padding: 0;">
+          <h3 style="font-family:'Oswald';">SDK's & Frameworks</h3>
+            <ul class="skill-list-small">
+              <li>Bootstrap</li>
+              <li>Android</li>
+              <li>iOS</li>
+              <li>Unity3D</li>
+              <li>Gamebryo</li>
+            </ul>
+          </div>
+          <div class="col-sm-2" style="text-align:center; padding: 0;">
+            <h3 style="font-family:'Oswald';">Software</h3>
+            <ul class="skill-list-small">
+              <li>Photoshop</li>
+              <li>Illustrator/InDesign</li>
+              <li>Unity3D</li>
+              <li>3DS Max</li>
+              <li>Github</li>
+              <li>Perforce</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div class="col-sm-2" style="text-align:center; padding: 0;">
+            <h3 style="font-family:'Oswald';">Scripting Languages</h3>
+            <ul class="skill-list-small">
+              <li>Maxscript</li>
+              <li>Python</li>
+              <li>LUA</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+          <div class="col-sm-3"></div>
+      </div>
+      
+      </div>
+    </div>
+    
+    <!-- Case Study 1 - Gannett (Rift/Unity) -->
+    
+    <!-- Case Study 2 - EA Skywriter (C#/Gamebryo) -->
+    
+    <!-- Case Study 3 - Endosys Website? Activatr? -->
+    
     <!-- Portfolio section -->
     <section id="portfolio"></section>
-    <div class="container">
-        
+    <div class="container-fluid" style="background-color:#fff;">
+      <div class="container">
         <div class="row">
-          
             <div class="col-sm-12 section-title text-center">
-                <h1 style="color:#fff;">MY <span style="background-color: rgba(0,150,250, .75);">WORK</span></h1>
+                <h1>MY <span style="background-color: rgba(0,150,250, .75);">WORK</span></h1>
             </div>
         </div>
         <div class="row">
@@ -242,8 +361,9 @@ if ($conn->connect_error) {
                         </div>
                       </div>
                     </div>
+              </div>
             </div>
-        </div>
+
     </div>
     
     <!-- resume -->
@@ -302,7 +422,7 @@ if ($conn->connect_error) {
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/lib/jquery.waypoints.min.js"></script>
@@ -310,6 +430,9 @@ if ($conn->connect_error) {
     <script src="js/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="js/portfolio.js"></script>
     <script src="js/waypoint.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/jquery.easypiechart.min.js"></script>
+    
     <script src="js/script.js"></script>
 
     

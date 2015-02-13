@@ -34,12 +34,37 @@ $(document).ready(function(){
                   var windscroll = $(window).scrollTop();
                   var sections = $("section");
                   sections.each(function(i) {
-                    console.log('each section: ' + $(this).attr("id"));
-                    console.log(i);
                     if ($(this).position().top <= windscroll) {
                       $('.nav-menu ul li a.active').removeClass('active');
                       $('.nav-menu ul li a').eq(i).addClass('active');
+                      
+                      if ($(this).attr('id') === 'skills') {
+                        $('.skill-list').animate({
+                          'opacity':1
+                        }, 1000);
+                        $(function() {
+                          $('.skillChart').easyPieChart({
+                            barColor: 'rgba(0,150,250, .75);',
+                            trackColor: '#fff',
+                            trackWidth: '10',
+                            scaleColor: false,
+                            lineCap: 'round',
+                            lineWidth: 10,
+                            size: '80',
+                            easing: 'easeOutBounce',
+                            onStep: function(from, to, percent) {
+                              $(this.el).find('.percent').text(Math.round(percent));
+                              }
+                              });
+                          });
+                      }
+                      console.log($(this).attr('id'));
                     }
+                    
+                    
+                    
+
+                    
                   });
                 });
                 
@@ -104,7 +129,8 @@ $(document).ready(function(){
 					}
 				});
 			}
-		});
-                
-                
+		});               
 	});
+
+
+
