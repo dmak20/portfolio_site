@@ -1,10 +1,14 @@
 $(function() {
-    var $container = $('.portfolio');
+    var $container = $('.portfolio-items');
     // init
     $container.isotope({
       // options
-      itemSelector: '.item',
-      layoutMode: 'fitRows',
+      itemSelector: '.portfolio-item',
+
+      masonry: {
+        columnWidth: 40,
+        isFitWidth: true
+        },
       animationOptions: {
         duration: 250,
         easing: 'easeInOutSine',

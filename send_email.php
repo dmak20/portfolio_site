@@ -1,8 +1,8 @@
 <?php
 
 	$autoResponse = true; //if set to true auto response email will be sent, if you don't want autoresponse set it to false
-	$autoResponseSubject = "Demo Contact Form"; 
-	$autoResponseMessage = "Hi, thank you testing the JQuery Contact Form Demo.";
+	$autoResponseSubject = "Thanks for contacting me!"; 
+	$autoResponseMessage = "Hi, I'll get back to you as soon as possible.";
 	$autoResponseHeaders = "From: info@danmakfinsky.com";  
 	
     //we need to get our variables first

@@ -1,18 +1,6 @@
 <?php
-// connect to the mysql server
-$mysql_server = 'localhost';
-$mysql_user = 'root';
-$mysql_pass = '';
-$mysql_db = 'dmak';
 
-$conn = new mysqli($mysql_server, $mysql_user, $mysql_pass, $mysql_db);
-
-if ($conn->connect_error) {
-  die('Connection failed: ' . $conn->connect_error);
-}
-
-
-
+include('db_connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +15,10 @@ if ($conn->connect_error) {
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery.wm-gridfolio-1.0.min.css">
+ 
+
+    
     <link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,6 +29,7 @@ if ($conn->connect_error) {
     <![endif]-->
   </head>
   <body>
+   
     <section id="home"></section>
     <!-- header -->
     <!-- navbar fixed to top -->
@@ -49,14 +42,14 @@ if ($conn->connect_error) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-default navbar-brand" href="#" >DM
-                    <!--<img alt="Brand" src="img/dm_brand.png"/>-->
+  <!--              <a class="navbar-default navbar-brand" href="#" >DM
+                    <img alt="Brand" src="img/dm_brand.png"/>
                     
-                </a>
+                </a>-->
             </div>
             <div class="collapse navbar-collapse nav-menu" id="collapse-1">
 
-                <ul class="nav navbar-right">
+                <ul class="nav navbar-left">
                   <li>
                     <a href="#home">Home</a>
                   </li>
@@ -67,10 +60,7 @@ if ($conn->connect_error) {
                     <a href="#skills">Skills</a>
                   </li>
                   <li>
-                      <a href="#portfolio">Work</a>
-                  </li>
-                  <li>
-                    <a href="#resume">Resume</a>
+                    <a href="#work">Work</a>
                   </li>
                   <li class="hireMe">
                     <a href="#hire">Hire Me</a>
@@ -82,7 +72,7 @@ if ($conn->connect_error) {
     </nav>
        
     <!-- content -->
-    
+
     <!-- Home/Hero caption or image -->
     <div class="container-fluid">
         <div class="row">
@@ -99,7 +89,7 @@ if ($conn->connect_error) {
             </div>
         </div>
     </div>
-    
+   
     <!-- About Me -->
     <section id="about"></section>
     <div class="container-fluid about">
@@ -113,7 +103,7 @@ if ($conn->connect_error) {
         
         <div class="row">
             <div class="col-sm-3 text-center info-picture-box">
-              <img src="img/headshot.jpg" class="img-center img-responsive" style="margin-left:auto; margin-right:auto;"/>
+              <img src="img/headshot.jpg" class="img-center img-responsive" title="I've been out of work for a while. Does it show?" style="margin-left:auto; margin-right:auto;"/>
               <div class="info-picture-caption">
                 <h2 style="color:#fff; margin:0;">DAN MAKFINSKY</h2>
                 <h5 style="color:#fff;">Multimedia Developer</h5>
@@ -125,9 +115,7 @@ if ($conn->connect_error) {
               <p>I am currently a freelance contractor available to work on a variety of projects ranging from gaming and interactive media development to mobile and web development.
               While I am most passionate about developing games using technology like Unity3D, I have spent a considerable amount of time developing for iOS and Android as
               well as working on front and backend web frameworks.</p>
-              <p>I love working with new software and hardware technology which means that I'm constantly learning. Seldom does a day
-              pass where I haven't done a tutorial or completed another online lesson through one of various online education websites I frequent.
-              As well as software development, I am beginning my foray into microcontrollers, namely the arduino.</p>
+              <p>&nbsp;</p>
               <div class="hire-text"><a href="#hire" class="hire-button-text">Hire me</a> today start building your project!</div>
               
             </div>
@@ -139,6 +127,13 @@ if ($conn->connect_error) {
               </ul>
               <div class="resume"><a class="btn btn-default" href="DanMakfinsky_RESUME_2015_Feb_4.pdf" role="button" target="_blank">Download Resume</a></div>
                 <div class="awards-section">
+                  <strong style="color:#666;font-size:18px; font-family:'Oswald'; font-weight:normal;">Shipped Games</strong>
+                  <ul>
+                    <li class="award-box"><img src="img/games/war.png" class="img-responsive" title="EA Warhammer Online"/></li>
+                    <li class="award-box"><img src="img/games/u4e.png" class="img-responsive" title="Ultima Forever: Quest for the Avatar"/></li>
+                  </ul>
+                </div>
+                <div class="awards-section">
                   <strong style="color:#666;font-size:18px; font-family:'Oswald'; font-weight:normal;">Awards</strong>
                   <ul>
                     <li class="award-box"><img src="img/awards/award_w3.png" class="img-responsive"/></li>
@@ -147,13 +142,7 @@ if ($conn->connect_error) {
                     <li class="award-box"><img src="img/awards/award_communicator.png" class="img-responsive"/></li>
                   </ul>
                 </div>
-                <div class="awards-section">
-                  <strong style="color:#666;font-size:18px; font-family:'Oswald'; font-weight:normal;">Games Shipped</strong>
-                  <ul>
-                    <li class="award-box"><img src="img/games/war.png" class="img-responsive" title="EA Warhammer Online"/></li>
-                    <li class="award-box"><img src="img/games/u4e.png" class="img-responsive" title="Ultima Forever: Quest for the Avatar"/></li>
-                  </ul>
-                </div>
+
                 
             </div>
         </div>
@@ -250,22 +239,19 @@ if ($conn->connect_error) {
               <li>Python</li>
               <li>LUA</li>
               <li>Javascript</li>
+              <li>Actionscript</li>
             </ul>
           </div>
           <div class="col-sm-3"></div>
       </div>
       
       </div>
-    </div>
     
     <!-- Case Study 1 - Gannett (Rift/Unity) -->
-    
-    <!-- Case Study 2 - EA Skywriter (C#/Gamebryo) -->
-    
-    <!-- Case Study 3 - Endosys Website? Activatr? -->
-    
+
     <!-- Portfolio section -->
-    <section id="portfolio"></section>
+
+    <section id="work"></section>
     <div class="container-fluid" style="background-color:#fff;">
       <div class="container">
         <div class="row">
@@ -273,111 +259,145 @@ if ($conn->connect_error) {
                 <h1>MY <span style="background-color: rgba(0,150,250, .75);">WORK</span></h1>
             </div>
         </div>
+   
+   
         <div class="row">
-            <div class="col-sm-12">
-                  <!-- Button filter list here -->
-                  <div id="filters">
-                    <ul class="portfolio-filter-list list-inline white">
-                      
-                      <?php
-                      // Create a list of unique filters based on the tags in the portfolio section
-                      $sql = "select tags from portfolio";
-                      $result = $conn->query($sql);
-                      
-                      $tagArray = '';
-                      $i = 0;
-                      while ($row = $result->fetch_assoc()) {
-                        if ($i != 0) {
-                          $tagArray .=",";
-                        }
-                        $tagArray .= $row['tags'];
-                        $i++;
-                      }
-                      
-                      $tagArray = explode(',', $tagArray);
-                      $tagArray = array_unique($tagArray);
-                      
-                      // print our ALL filter button
-                      ?>
-                      <li>
-                        <a class="active item" href="#_" data-filter="*">ALL</a>
-                      </li>
-                      
-                      <?php
-                      // print the rest of our filters
-                      
-                      for ($i = 0; $i < count($tagArray); $i++) {
-                        echo "<li>\n<a class='item' href='#_' data-filter='.".$tagArray[$i]."'>".strtoupper($tagArray[$i])."</a>\n</li>";
-                      }
-                      ?>
-                      <!-- <li>
-                        <a class="item" href="#_" data-filter=".game">GAME</a>
-                      </li>
-                      <li>
-                        <a class="item" href="#_" data-filter=".mobile">MOBILE</a>
-                      </li>
-                      <li>
-                        <a class="item" href="#_" data-filter=".web">WEB</a>
-                      </li>
-                      <li>
-                        <a class="item" href="#_" data-filter=".kiosk">KIOSK</a>
-                      </li> -->
-                    </ul>
-                    </div>
-                  </div>
+          <div class="col-sm-12">
+            <!-- unhide this if a portfolio is selected -->
+            <div class="portfolio-detail">
+              <div class="row" >
+                <div class="col-sm-12 portfolio-title">
+                  title here
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 portfolio-images">
+                  
+                </div>
+              </div>
+              <div class="row portfolio-description">
+                <div class="col-sm-12 portfolio-description">
+                  
+                </div>
+              </div>
+              
+              <div class="close-details"></div>
             </div>
-                  <!-- End of button filter list -->
-            <div class="container" style="vertical-align: middle;">
-            <div class="row" style="vertical-align: middle;">
-                      <div class="col-sm-10">
-                        <div class="portfolio">
-                          
+            <!-- END of detail -->
+            <div class="portfolio-items">
                           <!-- Portfolio thumbnails here -->
-                          <?php
+                          <?php /*
                           $sql = "select * from portfolio";
                           $result = $conn->query($sql);
                           
                           if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
-                              echo "<div class='item ". str_replace(",", " ", $row['tags']) ."'>";
+                              echo "<div class='portfolio-item ". str_replace(",", " ", $row['tags']) ."'>";
                               echo "<div class='frame'>";
-                              echo "\t<a href='#_'>";
+                              echo "\t<div class='portfolio-link' data-projectid=".$row['id'].">";
                               echo "\t\t<img width='280' height='190' src='img/portfolio/".$row['thumbnail']."'/>";
                               echo "\t\t<div class='overlay'>";
                               echo "\t\t\t<div class='item-info'>";
                               echo "\t\t\t\t<i class='fa-camera'></i>";
-                              echo "\t\t\t\t<h3>Project Name</h3>";
+                              echo "\t\t\t\t<h3>".$row['name']."</h3>";
                               echo "\t\t\t\t<span>".strtoupper(str_replace(","," / ", $row['tags']))."</span>";
                               echo "\t\t\t</div>";
                               echo "\t\t</div>";
-                              echo "\t</a>";
+                              echo "\t</div>";
                               echo "</div>";
                               echo "</div>\n\n";
                             }
-                          }
+                          }*/
                           ?>
                         <!-- End of Portfolio thumbnails here -->
                         
-                        </div>
-                      </div>
-                    </div>
-              </div>
             </div>
-
-    </div>
-    
-    <!-- resume -->
-        <section id="resume"></section>
-    <div class="container-fluid resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 section-title text-center">
-            <h1>MY <span style="background-color: rgba(0,150,250, .75);">RESUME</span></h1>
           </div>
+        </div>
       </div>
-    </div>
-    </div>
+      
+      
+      
+  <!-- Portfolio grid plugin -->
+  <div class="wmg-container demo">
     
+  <?php
+  $sql = "select * from portfolio";
+  $result = $conn->query($sql);
+  
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      echo "<div class=\"wmg-item\">
+      
+      <div class=\"wmg-thumbnail\">
+      <div class=\"portfolio-item\">
+      <div class=\"frame\">
+        <div class='overlay'>
+          <div class='item-info'>
+            <h3>".$row['name']."</h3>
+            <span>".strtoupper(str_replace(","," / ", $row['tags']))."</span>
+          </div>
+        </div>
+        <div class=\"wmg-thumbnail-content\">
+          <img src=\"img/portfolio/".$row['thumbnail']."\" alt=\"image\" title=\"".$row['name']."\">
+        </div>
+        <div class=\"wmg-arrow\"></div>
+      </div>
+      </div>
+      </div>
+      <div class=\"wmg-details\"> <span class=\"wmg-close\">X</span>
+        <div class=\"wmg-details-content\"> 
+           
+          <!-- Image details -->
+          <div class=\"container item-detail\">
+            <div class=\"row \">
+              <div class=\"col-md-6\"> <img src=\"img/portfolio/".$row['image']."\" alt=\"image\" title=\"".$row['name']."\"> </div>
+              <div class=\"col-md-6\">
+                <h2>".$row['name']."</h2>
+                <p>".strtoupper(str_replace(","," / ", $row['tags']))."
+                <hr>
+                <p>".$row['description']."</p>
+                <!-- if there's a link post it here -->
+                ";
+                if ($row['link'] != '') {
+                  echo "
+                  <a href=\"".$row['link']."\" target=\"_blank\" class=\"btn btn-default\" title=\"Read more\">link</a>";
+                }
+                echo " </div>
+            </div>
+          </div>
+           
+        </div>
+      </div>
+      </div>";
+    }
+      
+    /*  echo "<div class='portfolio-item ". str_replace(",", " ", $row['tags']) ."'>";
+      echo "<div class='frame'>";
+      echo "\t<div class='portfolio-link' data-projectid=".$row['id'].">";
+      echo "\t\t<img width='280' height='190' src='img/portfolio/".$row['thumbnail']."'/>";
+      echo "\t\t<div class='overlay'>";
+      echo "\t\t\t<div class='item-info'>";
+      echo "\t\t\t\t<i class='fa-camera'></i>";
+      echo "\t\t\t\t<h3>".$row['name']."</h3>";
+      echo "\t\t\t\t<span>".strtoupper(str_replace(","," / ", $row['tags']))."</span>";
+      echo "\t\t\t</div>";
+      echo "\t\t</div>";
+      echo "\t</div>";
+      echo "</div>";
+      echo "</div>\n\n";*/
+  }
+  ?>     
+  </div>
+
+<!--- END OF PLUGIN -->
+      
+      
+      
+      
+    
+    </div>
+  
     <!-- Contact section -->
     <section id="hire"></section>
     <div class="container-fluid contact">
@@ -417,13 +437,14 @@ if ($conn->connect_error) {
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">footer content here.</p>
+        <p class="text-muted">All rights reserved. &copy; Copyright 2015.</p>
       </div>
     </footer>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery.wm-gridfolio-1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/lib/jquery.waypoints.min.js"></script>
     <script src="js/notify.min.js"></script>
@@ -433,6 +454,7 @@ if ($conn->connect_error) {
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/jquery.easypiechart.min.js"></script>
     
+
     <script src="js/script.js"></script>
 
     
